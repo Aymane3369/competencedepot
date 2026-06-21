@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Mes projets</title>
+
+<style>
+body{
+    font-family: Arial;
+    background:#f4f6f8;
+    margin:0;
+    padding:20px;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.category{
+    margin-top:20px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    overflow:hidden;
+}
+
+.cat-title{
+    background:#3498db;
+    color:white;
+    padding:10px;
+    cursor:pointer;
+}
+
+.cat-content{
+    display:none;
+    padding:10px;
+}
+
+a{
+    display:block;
+    padding:5px 0;
+    color:#2980b9;
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h1>📁 Mes projets d’ingénierie</h1>
+
+<!-- BÉTON -->
+<div class="category">
+<div class="cat-title">Béton armé</div>
+<div class="cat-content">
+    <a href="files/beton/projet1.pdf" target="_blank">Projet 1 - Dalle BA</a>
+    <a href="files/beton/projet2.pdf" target="_blank">Projet 2 - Poteaux</a>
+</div>
+</div>
+
+<!-- BOIS -->
+<div class="category">
+<div class="cat-title">Bois</div>
+<div class="cat-content">
+    <a href="files/bois/charpente1.pdf">Charpente 1</a>
+</div>
+</div>
+
+<!-- MÉTAL -->
+<div class="category">
+<div class="cat-title">Construction métallique</div>
+<div class="cat-content">
+    <a href="files/metal/hangar.pdf">Hangar industriel</a>
+</div>
+</div>
+
+<!-- GÉOTECHNIQUE -->
+<div class="category">
+<div class="cat-title">Géotechnique</div>
+<div class="cat-content">
+    <a href="files/geo/semelle.pdf">Semelle isolée</a>
+</div>
+</div>
+
+<!-- LOGICIELS -->
+<div class="category">
+<div class="cat-title">Logiciels</div>
+<div class="cat-content">
+    <a href="files/log/robot.pdf">Robot Structural Analysis</a>
+    <a href="files/log/plaxis.pdf">Plaxis</a>
+</div>
+</div>
+
+</div>
+
+<script>
+document.querySelectorAll(".cat-title").forEach(item=>{
+    item.addEventListener("click", ()=>{
+        let content = item.nextElementSibling;
+        content.style.display =
+            content.style.display === "block" ? "none" : "block";
+    });
+});
+</script>
+
+</body>
+</html>
